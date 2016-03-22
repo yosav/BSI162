@@ -6,7 +6,45 @@ using System.Threading.Tasks;
 
 namespace SharedClasses
 {
-    public class Class1
+    
+    /* class User describes the user's attributes and functionality */ 
+    public class User
     {
+        private string userName;
+        private string password;
+        /* constructor */
+        public User(string _userName, string _password)
+        {
+            userName = _userName;
+            password = _password;
+        }
+        /* geters and seters */
+        public void setUserName(string _userName)
+        {
+            userName = _userName;
+        }
+        public string getUserName()
+        {
+            return userName;
+        }
+        public void setPassword(string _password)
+        {
+            password = _password;
+        }
+        public string getPassword()
+        {
+            return password;
+        }
+        /*comparing details between users */
+        public bool equals(User diffUser)
+        {
+            return (userName.Equals(diffUser.getUserName()) && checkPassword(diffUser));
+        }
+        /* comparing password between users */
+        public bool checkPassword(User diffUser)
+        {
+            return password.Equals(diffUser.getPassword());
+
+        }
     }
 }
