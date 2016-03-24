@@ -1,1 +1,14 @@
 C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\programLauncher.exe.config
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\programLauncher.exe
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\programLauncher.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\BL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\DAL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\PL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\SharedClasses.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\BL.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\DAL.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\PL.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\bin\Debug\SharedClasses.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\obj\Debug\programLauncher.csprojResolveAssemblyReference.cache
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\obj\Debug\programLauncher.exe
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\programLauncher\obj\Debug\programLauncher.pdb

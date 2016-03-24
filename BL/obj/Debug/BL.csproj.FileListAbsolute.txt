@@ -1,0 +1,9 @@
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\BL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\BL.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\DAL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\SharedClasses.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\DAL.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\bin\Debug\SharedClasses.pdb
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\obj\Debug\BL.dll
+C:\Users\itay\Documents\Visual Studio 2015\Projects\BSI162\BL\obj\Debug\BL.pdb

@@ -15,7 +15,7 @@ namespace DAL
         /* Changing the password of a given user in the data base (in case he exists there) */
         bool changePassword(User user, string password);
     }
-    public class DAL : IDAL
+    public class DAL_v1 : IDAL
     {
         private StreamReader DBiterator;
         
@@ -36,7 +36,7 @@ namespace DAL
                 if (user.equals(comparedUser))
                     found = true;
             }
-            DBiterator.Close();
+          
             return found;
         }
         public bool changePassword(User user, string password)
@@ -54,6 +54,10 @@ namespace DAL
                     foundUser = true;
                 userNameDB = DBiterator.ReadLine();
                 writer.WriteLine(userNameDB);
+            }
+            if (foundUser)
+            {
+                writer.WriteLine(password);
             }
             DBiterator.Close();
             writer.Close();
