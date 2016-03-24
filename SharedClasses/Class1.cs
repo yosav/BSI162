@@ -46,5 +46,11 @@ namespace SharedClasses
             return password.Equals(diffUser.getPassword());
 
         }
+        /* comparing user name between users */
+        public bool checkUserName(User diffUser)
+        {
+            return userName.Equals(diffUser.getUserName());
+
+        }
     }
 }
