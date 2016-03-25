@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using SharedClasses;
-using System.IO;
+
 
 namespace programLauncher
 {
@@ -15,14 +15,12 @@ namespace programLauncher
         {
                 
                 DAL_v1 dal = new DAL_v1();
-               User user = new User("itayro", "ibS3gvex");
+               User user = new User("markr", "yxgx73fo");
                 if (dal.searchUser(user)) 
                     Console.WriteLine("yyy");
                 Console.WriteLine("stam");
-              dal.changePassword(user, "123");
-           /*   StreamReader str = new StreamReader("C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt");
-            str.Close();
-*/
+              dal.changePassword(user, "12345678");
+         
         }
     }
 }

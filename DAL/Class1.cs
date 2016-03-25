@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using SharedClasses;
 
+
 namespace DAL
 {
     public interface IDAL
@@ -18,7 +19,8 @@ namespace DAL
     public class DAL_v1 : IDAL
     {
         private StreamReader DBiterator;
-        
+        private string fileDestination;
+
          public bool searchUser(User user)
         {
             bool found = false;
@@ -31,36 +33,45 @@ namespace DAL
             while (!DBiterator.EndOfStream & !found)
             {
                 comparedUserName = DBiterator.ReadLine();
+                Console.WriteLine(comparedUserName);
                 comparedPassword = DBiterator.ReadLine();
+                Console.WriteLine(comparedPassword);
                 comparedUser = new User(comparedUserName, comparedPassword);
+                Console.WriteLine(user.equals(comparedUser));
                 if (user.equals(comparedUser))
+                {
                     found = true;
+                    Console.WriteLine(found);
+                }
             }
-          
+            Console.ReadLine();
+            DBiterator.Dispose();
             return found;
         }
         public bool changePassword(User user, string password)
         {
-            StreamWriter writer = new StreamWriter("C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt");
+            fileDestination = "C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt";
+            FileStream oStream = new FileStream(fileDestination, FileMode.Open, FileAccess.Write, FileShare.Read);
+            FileStream iStream = new FileStream(fileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            /* EXCEPTION NEED: TRY AND CATCH (IF THE FILE EXISTS) */
+            StreamWriter writer = new StreamWriter(oStream);
             bool foundUser = false;
             string userNameDB;
             /* EXCEPTION NEED: TRY AND CATCH (IF THE FILE EXISTS) */
-            DBiterator = new StreamReader("C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt");
+            DBiterator = new StreamReader(iStream);
             while (!DBiterator.EndOfStream  && !foundUser)
             {
                 userNameDB = DBiterator.ReadLine();
                 writer.WriteLine(userNameDB);
                 if (userNameDB.Equals(user.getUserName()))
                     foundUser = true;
-                userNameDB = DBiterator.ReadLine();
-                writer.WriteLine(userNameDB);
             }
             if (foundUser)
             {
                 writer.WriteLine(password);
             }
-            DBiterator.Close();
-            writer.Close();
+            DBiterator.Dispose();
+            writer.Dispose();
             return true;
         }
        

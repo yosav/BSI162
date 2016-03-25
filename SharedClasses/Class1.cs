@@ -38,7 +38,7 @@ namespace SharedClasses
         /*comparing details between users */
         public bool equals(User diffUser)
         {
-            return (userName.Equals(diffUser.getUserName()) && checkPassword(diffUser));
+            return checkUserName(diffUser) && checkPassword(diffUser);
         }
         /* comparing password between users */
         public bool checkPassword(User diffUser)
