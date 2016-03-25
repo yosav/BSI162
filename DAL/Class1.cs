@@ -65,6 +65,12 @@ namespace DAL
                 writer.WriteLine(userNameDB);
                 if (userNameDB.Equals(user.getUserName()))
                     foundUser = true;
+                if(!foundUser)
+                {
+                    userNameDB = DBiterator.ReadLine();
+                    writer.WriteLine(userNameDB);
+                }
+
             }
             if (foundUser)
             {

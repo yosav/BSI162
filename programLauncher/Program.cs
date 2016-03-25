@@ -13,14 +13,11 @@ namespace programLauncher
     {
         static void Main(string[] args)
         {
-                
-                DAL_v1 dal = new DAL_v1();
-               User user = new User("markr", "yxgx73fo");
-                if (dal.searchUser(user)) 
-                    Console.WriteLine("yyy");
-                Console.WriteLine("stam");
-              dal.changePassword(user, "12345678");
-         
+            testDAL();  
+        }
+        static void testDAL()
+        {
+            /* IMPEMENTATION NEEDED */
         }
     }
 }
