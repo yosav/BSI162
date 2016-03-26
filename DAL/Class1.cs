@@ -28,23 +28,22 @@ namespace DAL
             string comparedUserName;
             User comparedUser;
             /* EXCEPTION NEED: TRY AND CATCH (IF THE FILE EXISTS) */
-            DBiterator = new StreamReader("C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt");
-
+            try {
+                DBiterator = new StreamReader("C:\\Users\\itay\\Documents\\Visual Studio 2015\\Projects\\BSI162\\DB.txt");
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Data Base was not found in the specific location.");
+                return false;
+            }
             while (!DBiterator.EndOfStream & !found)
             {
                 comparedUserName = DBiterator.ReadLine();
-                Console.WriteLine(comparedUserName);
                 comparedPassword = DBiterator.ReadLine();
-                Console.WriteLine(comparedPassword);
                 comparedUser = new User(comparedUserName, comparedPassword);
-                Console.WriteLine(user.equals(comparedUser));
                 if (user.equals(comparedUser))
-                {
                     found = true;
-                    Console.WriteLine(found);
-                }
             }
-            Console.ReadLine();
             DBiterator.Dispose();
             return found;
         }
@@ -54,11 +53,18 @@ namespace DAL
             FileStream oStream = new FileStream(fileDestination, FileMode.Open, FileAccess.Write, FileShare.Read);
             FileStream iStream = new FileStream(fileDestination, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             /* EXCEPTION NEED: TRY AND CATCH (IF THE FILE EXISTS) */
-            StreamWriter writer = new StreamWriter(oStream);
+            StreamWriter writer;
+            try {
+                DBiterator = new StreamReader(iStream);
+                writer = new StreamWriter(oStream);
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("Data Base was not found in the specific location.");
+                return false;
+            }
             bool foundUser = false;
             string userNameDB;
-            /* EXCEPTION NEED: TRY AND CATCH (IF THE FILE EXISTS) */
-            DBiterator = new StreamReader(iStream);
             while (!DBiterator.EndOfStream  && !foundUser)
             {
                 userNameDB = DBiterator.ReadLine();
